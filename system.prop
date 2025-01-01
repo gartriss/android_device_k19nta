@@ -1,6 +1,13 @@
 #
-# system.prop for Lenovo K4 Note
+# system.prop for Vernee Thor E
 #
+
+LOCAL_PATH := device/vernee/k19nta
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
 
 # RIL
 rild.libpath=/system/lib64/mtk-ril.so
